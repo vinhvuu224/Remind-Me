@@ -1,26 +1,50 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
+import Home from "./Components/Home/Home";
+import NoDB from './Components/NoDB/NoDB';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+class App extends React.Component {
+
+  constructor(props){
+    super(props);
+    this.state ={
+      id: "",
+      items:[],
+    }
+    this.noDbItems = this.noDbItems.bind(this);
+    this.updateID = this.updateID.bind(this);
+
+  }
+
+  noDbItems(data){
+    this.setState({
+      items: data
+    })
+  }
+
+  updateID(data){
+    this.setState({
+      id: data
+    })
+  }
+
+
+
+ render(){   
+   return (
+     <div >
+    <Router>
+      <Switch>
+        <Route exact path='/Home' render={(props) => (<Home {...this.props} userID = {this.state.id} updateItems={this.noDbItems} noDbItems={this.state.items}/>)}/>
+        <Route exact path='/' render={(props) => (<NoDB {...this.props} passNoDbItems={this.noDbItems} updateID={this.updateID} noDbItems={this.noDbItems}/>)}/>
+      </Switch>
+    </Router>
+    
     </div>
-  );
+   );
 }
-
+}
+ 
 export default App;
+ 

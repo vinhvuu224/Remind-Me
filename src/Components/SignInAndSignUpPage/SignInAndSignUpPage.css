@@ -1,0 +1,244 @@
+
+
+.Demo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 400px;
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    z-index: 200;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+  }
+
+  .Demo.open{
+      transform: translateX(0);
+  }
+
+  .SignUpPage{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 400px;
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    z-index: 200;
+  }
+
+  .SignUpPage.close{
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+  }
+  
+  .Demo__Aside {
+    width: 50%;
+    background-color: #66CCff;
+  }
+  
+  .Demo__Form {
+    width: 100%;
+    background-color: #2E4158;
+    padding: 25px 40px;
+    overflow: auto;
+  }
+  
+  .PageSwitcher {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10%;
+  }
+  
+  .PageSwitcher__Item {
+    background-color: #4C5D72;
+    color: #9DA6B1;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-size: .9em;
+    border: none;
+    outline: none;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  
+
+  .SignIn-Inactive{
+    background-color: #4C5D72;
+    color: #9DA6B1;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-size: .9em;
+    border: none;
+    outline: none;
+    display: inline-block;
+    text-decoration: none;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+  }
+
+  .SignIn-Active{
+    width: 100px;
+    background-color: #5ED0C0;
+    color: white;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+
+  }
+
+  .SignUp-Active{
+    width: 100px;
+    background-color: #5ED0C0;
+    color: white;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+
+  .SignUp-Inactive{
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: #4C5D72;
+    color: #9DA6B1;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-size: .9em;
+    border: none;
+    outline: none;
+    display: inline-block;
+    text-decoration: none;
+      
+}
+  
+  .PageSwitcher__Item--Active {
+    background: #5ED0C0 !important;
+    color: white !important;
+  }
+  
+  .PageSwitcher__Item:first-child {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+  }
+  .PageSwitcher__Item:last-child {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+
+  .current__Item{
+    width: 100px;
+    background-color: #5ED0C0;
+    color: white;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+  }
+
+  
+  
+  .FormCenter {
+    margin-bottom: 100px;
+  }
+  
+  .FormTitle {
+    color: #707C8B;
+    font-weight: 300;
+    margin-bottom: 50px;
+  }
+  
+  .FormTitle__Link {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.7em;
+    margin: 0 10px;
+    padding-bottom: 5px;
+    color: white;
+    border-bottom: 1px solid #199087;
+    margin-left: 0;
+  }
+
+  .SignInLabel {
+    color: white;
+    border-bottom: 1px solid #199087;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.7em;
+    margin: 0 10px;
+    padding-bottom: 5px;
+    margin-left: 0;
+  }
+  
+  .FormTitle__Link:first-child {
+    margin-left: 0;
+  }
+  
+  .FormTitle__Link--Active {
+    color: white;
+    border-bottom: 1px solid #199087;
+  }
+  
+  .FormField {
+    margin-bottom: 40px;
+  }
+  
+  .FormField__Label {
+    display: block;
+    text-transform: uppercase;
+    font-size: .9em;
+    color: white;
+  }
+  .FormField__Input {
+    width: 85%;
+    background-color: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    border-bottom: 1px solid #445366;
+    font-size: 1em;
+    font-weight: 300;
+    padding-bottom: 10px;
+    margin-top: 10px;
+  }
+  
+  .FormField__Input::placeholder {
+    color: #616E7F;
+  }
+  
+  .FormField__Button {
+    background-color: #52C4B9;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding: 15px 70px;
+    font-size: .8em;
+    font-weight: 500;
+  }
+  
+  .FormField__Link {
+    color: #66707D;
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 1.5px solid #225E62;
+    padding-bottom: 5px;
+  }
+  
+  .FormField__CheckboxLabel {
+    color: #646F7D;
+    font-size: .9em;
+  }
+  
+  .FormField__Checkbox {
+    position: relative;
+    top: 1.5px;
+  }
+  
+  .FormField__TermsLink {
+    color: white;
+    border-bottom: 1px solid #199087;
+    text-decoration: none;
+    display: inline-block;
+    padding-bottom: 2px;
+    margin-left: 5px;
+  }
